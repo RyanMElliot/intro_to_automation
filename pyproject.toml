@@ -1,0 +1,10 @@
+[project]
+name = "millerplasma"
+version = "0.1.0"
+dependencies = [
+    "numpy >= 1.25.0",
+    "matplotlib >= 3.7.0",
+]
+
+[project.optional-dependencies]
+tests = ["pytest"]
