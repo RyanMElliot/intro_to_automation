@@ -23,7 +23,7 @@ def flux_surface(A=2.2, kappa=1.5, delta=0.3, R0=2.5):
     return (R_s, Z_s)
 
 
-def plot_surface(R_s, Z_s, savefig=True):
+def plot_surface(R_s, Z_s, savefig=True, ax=None):
     """
     Read in R_s and Z_s and plot figure
 
@@ -31,11 +31,14 @@ def plot_surface(R_s, Z_s, savefig=True):
     R_s
     Z_s
     savefig (= true)
+    ax (= None)
     """
-    plt.plot(R_s, Z_s)
-    plt.axis("equal")
-    plt.xlabel("R [m]")
-    plt.ylabel("Z [m]")
+    if ax is None:
+        (fig, ax) = plt.subplots()
+    ax.plot(R_s, Z_s)
+    ax.axis("equal")
+    ax.set_xlabel("R [m]")
+    ax.set_ylabel("Z [m]")
     if savefig:
         plt.savefig("./miller.png")
 
