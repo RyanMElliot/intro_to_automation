@@ -1,4 +1,4 @@
-import millerplasma as mil
+import miller as mil
 import numpy as np
 import matplotlib.pyplot as plt
 
