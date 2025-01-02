@@ -8,3 +8,6 @@ dependencies = [
 
 [project.optional-dependencies]
 tests = ["pytest"]
+
+[project.scripts]
+miller = "miller:main"
