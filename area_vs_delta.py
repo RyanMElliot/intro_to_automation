@@ -45,10 +45,9 @@ def main():
     areas = areas_from_deltas(deltas)
     (R_s, Z_s) = mil.flux_surface()
     print(Z_s)
-    fig, (ax1,ax2) = plt.subplots(1, 2)
-    mil.plot_surface(R_s, Z_s, savefig=False,ax=ax1)
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    mil.plot_surface(R_s, Z_s, savefig=False, ax=ax1)
     plot_delta_areas(deltas, areas, ax=ax2)
-    
 
 
 if __name__ == "__main__":
