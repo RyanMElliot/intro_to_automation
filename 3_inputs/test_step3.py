@@ -52,7 +52,7 @@ def test_input_file(tmp_path):
     pathlib.Path(filename).write_text(contents)
 
     status = subprocess.run(
-        ["miller", "--filename", filename], cwd=tmp_path, capture_output=True, text=True
+        ["miller", "--filein", filename], cwd=tmp_path, capture_output=True, text=True
     )
     assert status.returncode == 0, status.stderr
     figure = tmp_path / "miller.png"
